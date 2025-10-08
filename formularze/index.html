@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Stronka html">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Bartosz Szyjka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona html5</title>
+  <style>
+    h1 {text-align: center;}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form action="/action_page.php" method="get">
+                    <fieldset>
+                    <legend>Dane osobowe</legend>
+                        <label for="fname">Imię:</label>
+                    <input type="text" id="fname" name="fname" size="20"><br><br>
+                        <label for="lname">Nazwisko:</label>
+                    <input type="text" id="lname" name="lname" size="20"><br><br>
+                        <label for="lname">Zawód:</label>
+                    <input type="text" id="job" name="job" size="20"><br><br> 
+                    Płeć:
+                    <input type="radio" id="plec" name="baba">
+                     <label for="baba">K</label>
+                    <input type="radio" id="plec" name="chlop">
+                        <label for="chlop">M</label>
+                    </fieldset>
+                </form>
+            </td>
+            <td>
+                <form action="/action_page.php" method="get">
+                    <fieldset>
+                    <legend>Dane Kontaktowe</legend>
+                        <label for="ulica">Ulica:</label>
+                        <input type="text" id="ulica" name="ulica" size="30"><br><br>
+                        <label for="rn-domu">Numer domu:</label>
+                        <input type="text" id="nr-domu" name="nr-domu" size="5"><br><br>
+                        <label for="miasto">Miasto:</label> 
+                        <input type="text" id="miasto" name="miasto" size="20">
+                        <label for="kod-pocz">Kod:</label>
+                        <input type="text" id="kod-pocz" name="kod-pocz" size="6"> <br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" size="30">
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="/action_page.php" method="get">
+                    <fieldset>
+                    <legend>Oceń książkę</legend>
+                     <label for="ocena">Wybierz <br> jedną z</label>
+                          <select name="ocena" id="ocena">
+                              <option value="0">Oceń książkę przy pomocy tego pola</option>
+                              <option value="good">Dobra</option>
+                              <option value="meh">średnia</option>
+                              <option value="bad">słaba</option>
+                          </select> <br>
+                          pozycji
+                    </fieldset>
+                </form>
+            </td>
+            <td colspan="2">
+                <form action="/action_page.php" method="get">
+                    <fieldset>
+                        <legend>Uzasadnij ocenę</legend>
+                        <textarea id="long_ocena" name="long_ocena" rows="8" cols="50"></textarea>
+                    </fieldset>
+                </form>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Wyślij">
+                <button type="cancel">Anuluj</button>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <h1>Wypełnij formulaż</h1>
+    <hr color="red">
+    <form action="/action_page.php" method="get">
+    <fieldset>
+        <legend>Wypełnij obowiązkowo!</legend>
+        <label for="imie2">Imię:</label>
+        <input type="text" id="imie2" name="imie2"> <br><br>
+        <label for="nazwisko2">Nazwisko:</label>
+        <input type="text" id="nazwisko2" name="nazwisko2"> <br><br>
+        Płeć:
+        <input type="radio" id="plec" name="plec">
+        <label for="plec">Kobieta</label>
+        <input type="radio" id="plec" name="plec">
+        <label for="plec">Mężczyzna</label> <br><br>
+        <label for="miejsce-zamieszkania">Miejsce zamieszkania:</label>
+        <input type="text" id="miejsce-zamieszkania" name="miejsce-zamieszkania"> <br><br>
+        <label for="miasto2">Miasto</label>
+        <input type="text" id="miasto2" name="miasto2">
+    </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Opcjonalne dane</legend>
+            <label for="wyksztalcenie">Wyksztalcenie:</label>
+            <select name="wyksztalcenie" id="wyksztalcenie">
+                <option value="niepelne_podstawowe">niepełne podstawowe</option>
+                <option value="podstawowe">Podstawowe</option>
+                <option value="srednie">Średnie</option>
+                <option value="wyzsze">Wyższe</option>
+            </select> <br>
+            <table>
+                <tr>
+                    <td>
+                        <label for="portale">Najczęsciej odwiedzane portale</label> <br>
+                        <input type="checkbox" id="portale" name="onet">
+                        <label for="onet">Onet</label> <br>
+                        <input type="checkbox" id="portale" name="interia">
+                        <label for="interia">Interia</label> <br>
+                        <input type="checkbox" id="portale" name="wp">
+                        <label for="interia">Wirtualna polska</label> <br>
+                        <input type="checkbox" id="portale" name="wyborcza">
+                        <label for="interia">Gazeta wyborcza</label> <br>
+                    </td>
+                    <td>
+                        Zainteresowania:<br>
+                        <select>
+                            <option value="muzyka">Muzyka</option>
+                            <option value="informatyka">Informatyka</option>
+                            <option value="Matematyka">Matematyka</option>
+                            <option value="malarstwo">Malarstwo</option>
+                            <option value="taniec">Taniec</option>
+                            <option value="mechanika">Mechanika</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p>Uwagi</p>
+            <textarea id="long_uwagi" name="long_uwagi" rows="8" cols="50"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>
