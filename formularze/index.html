@@ -10,33 +10,44 @@
   <title>Strona html5</title>
   <style>
     h1 {text-align: center;}
-</style>
+  </style>
 </head>
 <body>
     <table>
         <tr>
             <td>
                 <form action="/action_page.php" method="get">
-                    <fieldset>
-                    <legend>Dane osobowe</legend>
-                        <label for="fname">Imię:</label>
-                    <input type="text" id="fname" name="fname" size="20"><br><br>
-                        <label for="lname">Nazwisko:</label>
-                    <input type="text" id="lname" name="lname" size="20"><br><br>
-                        <label for="lname">Zawód:</label>
-                    <input type="text" id="job" name="job" size="20"><br><br> 
-                    Płeć:
-                    <input type="radio" id="plec" name="baba">
-                     <label for="baba">K</label>
-                    <input type="radio" id="plec" name="chlop">
-                        <label for="chlop">M</label>
-                    </fieldset>
+                <fieldset>
+                    <legend><b>Dane osobowe</b></legend>
+                    <table>
+                    <tr>
+                        <td align="right"><label for="fname">Imię:</label></td>
+                        <td><input type="text" id="fname" name="fname" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="lname">Nazwisko:</label></td>
+                        <td><input type="text" id="lname" name="lname" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="job">Zawód:</label></td>
+                        <td><input type="text" id="job" name="job" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Płeć:</td>
+                        <td>
+                        <label>K:<input type="radio" name="plec" value="K"></label>
+                        <label>M:<input type="radio" name="plec" value="M"></label>
+                        </td>
+                    </tr>
+                    </table>
+                </fieldset>
                 </form>
             </td>
             <td>
                 <form action="/action_page.php" method="get">
                     <fieldset>
-                    <legend>Dane Kontaktowe</legend>
+                    <legend><b>Dane Kontaktowe</b></legend>
+                    <!--
                         <label for="ulica">Ulica:</label>
                         <input type="text" id="ulica" name="ulica" size="30"><br><br>
                         <label for="rn-domu">Numer domu:</label>
@@ -47,6 +58,28 @@
                         <input type="text" id="kod-pocz" name="kod-pocz" size="6"> <br><br>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" size="30">
+                    -->
+                        <table>
+                            <tr>
+                                <td align="right"><label for="ulica">Ulica:</label></td>
+                                <td><input type="text" id="ulica" name="ulica" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="rn-domu">Numer domu:</label></td>
+                                <td><input type="text" id="nr-domu" name="nr-domu" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="miasto">Miasto:</label></td>
+                                <td><input type="text" id="miasto" name="miasto" size="20">
+                                    <label for="kod-pocz">Kod:</label>
+                                    <input type="text" id="kod-pocz" name="kod-pocz" size="6"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="email">Email:</label></td>
+                                <td><input type="email" id="email" name="email" size="30"></td>
+                            </tr>
+                        </table>
                     </fieldset>
                 </form>
             </td>
@@ -55,7 +88,7 @@
             <td>
                 <form action="/action_page.php" method="get">
                     <fieldset>
-                    <legend>Oceń książkę</legend>
+                    <legend><b>Oceń książkę</b></legend>
                      <label for="ocena">Wybierz <br> jedną z</label>
                           <select name="ocena" id="ocena">
                               <option value="0">Oceń książkę przy pomocy tego pola</option>
@@ -70,7 +103,7 @@
             <td colspan="2">
                 <form action="/action_page.php" method="get">
                     <fieldset>
-                        <legend>Uzasadnij ocenę</legend>
+                        <legend><b>Uzasadnij ocenę</b></legend>
                         <textarea id="long_ocena" name="long_ocena" rows="8" cols="50"></textarea>
                     </fieldset>
                 </form>
@@ -78,7 +111,7 @@
 
         </tr>
         <tr>
-            <td>
+            <td align="center">
                 <input type="submit" value="Wyślij">
                 <button type="cancel">Anuluj</button>
             </td>
@@ -88,6 +121,7 @@
     <h1>Wypełnij formulaż</h1>
     <hr color="red">
     <form action="/action_page.php" method="get">
+    <font color="orange">
     <fieldset>
         <legend>Wypełnij obowiązkowo!</legend>
         <label for="imie2">Imię:</label>
@@ -102,10 +136,12 @@
         <label for="miejsce-zamieszkania">Miejsce zamieszkania:</label>
         <input type="text" id="miejsce-zamieszkania" name="miejsce-zamieszkania"> <br><br>
         <label for="miasto2">Miasto</label>
-        <input type="text" id="miasto2" name="miasto2">
+        <input type="text" id="miasto2" name="miasto2">  
     </fieldset>
+    </font>
     </form>
     <form>
+        <font color="green">
         <fieldset>
             <legend>Opcjonalne dane</legend>
             <label for="wyksztalcenie">Wyksztalcenie:</label>
@@ -140,10 +176,22 @@
                         </select>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Uwagi</p>
+                        <textarea id="long_uwagi" name="long_uwagi" rows="8" cols="50"></textarea>
+                    </td>
+                </tr>
+            </fieldset>
+            </font>
+                <tr>
+                    <td align="center">
+                        <input type="submit" value="Wyślij">
+                        <button type="cancel">Wyczyść pola</button>
+                    </td>
+                 </tr>
+
             </table>
-            <p>Uwagi</p>
-            <textarea id="long_uwagi" name="long_uwagi" rows="8" cols="50"></textarea>
-        </fieldset>
     </form>
 </body>
 </html>
