@@ -18,6 +18,9 @@
     #opcjatak:checked ~ .select-tak {
         display: inline-block;
     }
+    #opcjatak2:checked ~ .select-tak {
+        display: inline-block;
+    }
   </style>
 </head>
 <body>
@@ -157,10 +160,32 @@
         <label for="nazwisko2">Nazwisko:</label>
         <input type="text" id="nazwisko2" name="nazwisko2"> <br><br>
         Płeć:
-        <input type="radio" id="plec" name="plec">
-        <label for="plec">Kobieta</label>
-        <input type="radio" id="plec" name="plec">
-        <label for="plec">Mężczyzna</label> <br><br>
+        <input type="radio" id="plec2" name="plec2">
+        <label for="plec2">Kobieta</label>
+        <input type="radio" id="plec2" name="plec2">
+        <label for="plec2">Mężczyzna</label> 
+        <input type="radio" name="plec2" value="other" id="opcjatak2"><label for="opcjatak2">Inna</label>
+        <select class="select-tak hidden" name="inna_plec">
+          <option>-- Wybierz --</option>
+          <option>jajko półtwarde</option>
+          <option>piwko tesco</option>
+          <option>bewup</option>
+          <option>i use arch bdw</option>
+          <option>kostka do kibla</option>
+          <option>majonez kiszony</option>
+          <option>nieułożona kostka rubika</option>
+          <option>reklamówka z wallmarta</option>
+          <option>krótki ołówek z ikei</option>
+          <option>wenezuela</option>
+          <option>taboret bojowy</option>
+          <option>rudy kot</option>
+          <option>helikopter bojowy</option>
+          <option>kofola</option>
+          <option>szybki karton</option>
+          <option>krysian</option>
+        </select> <br><br>
+
+
         <label for="miejsce-zamieszkania">Miejsce zamieszkania:</label>
         <input type="text" id="miejsce-zamieszkania" name="miejsce-zamieszkania"> <br><br>
         <label for="miasto2">Miasto</label>
