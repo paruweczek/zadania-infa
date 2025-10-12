@@ -3,31 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Stronka html">
+  <meta name="description" content="Stronka html - ja cierpie w dole (formularze)">
   <meta name="keywords" content="HTML">
   <meta name="author" content="Bartosz Szyjka">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strona html5</title>
   <style>
     h1 {text-align: center;}
-
-    .hidden {
-        display: none;
-    }
-
-    #opcjatak:checked ~ .select-tak {
-        display: inline-block;
-    }
-    #opcjatak2:checked ~ .select-tak {
-        display: inline-block;
-    }
+    .hidden {display: none;}
+    #opcjatak:checked ~ .select-tak {display: inline-block;}
+    #opcjatak2:checked ~ .select-tak {display: inline-block;}
   </style>
 </head>
 <body>
+    <form action="/action_page.php" method="post">
     <table>
         <tr>
             <td>
-                <form action="/action_page.php" method="post">
+                
                 <fieldset>
                     <legend><b>Dane osobowe</b></legend>
                     <table>
@@ -72,82 +65,67 @@
                     </tr>
                     </table>
                 </fieldset>
-                </form>
             </td>
             <td>
-                <form action="/action_page.php" method="post">
-                    <fieldset>
-                    <legend><b>Dane Kontaktowe</b></legend>
-                    <!--
-                        <label for="ulica">Ulica:</label>
-                        <input type="text" id="ulica" name="ulica" size="30"><br><br>
-                        <label for="rn-domu">Numer domu:</label>
-                        <input type="text" id="nr-domu" name="nr-domu" size="5"><br><br>
-                        <label for="miasto">Miasto:</label> 
-                        <input type="text" id="miasto" name="miasto" size="20">
-                        <label for="kod-pocz">Kod:</label>
-                        <input type="text" id="kod-pocz" name="kod-pocz" size="6"> <br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" size="30">
-                    -->
-                        <table>
-                            <tr>
-                                <td align="right"><label for="ulica">Ulica:</label></td>
-                                <td><input type="text" id="ulica" name="ulica" size="30"></td>
-                            </tr>
-                            <tr>
-                                <td align="right"><label for="rn-domu">Numer domu:</label></td>
-                                <td><input type="text" id="nr-domu" name="nr-domu" size="5"></td>
-                            </tr>
-                            <tr>
-                                <td align="right"><label for="miasto">Miasto:</label></td>
-                                <td><input type="text" id="miasto" name="miasto" size="20">
-                                    <label for="kod-pocz">Kod:</label>
-                                    <input type="text" id="kod-pocz" name="kod-pocz" size="6"> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right"><label for="email">Email:</label></td>
-                                <td><input type="email" id="email" name="email" size="30"></td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                </form>
+               <fieldset>
+               <legend><b>Dane Kontaktowe</b></legend>
+                   <table>
+                       <tr>
+                           <td align="right"><label for="ulica">Ulica:</label></td>
+                           <td><input type="text" id="ulica" name="ulica" size="30"></td>
+                       </tr>
+                       <tr>
+                           <td align="right"><label for="rn-domu">Numer domu:</label></td>
+                           <td><input type="text" id="nr-domu" name="nr-domu" size="5"></td>
+                       </tr>
+                       <tr>
+                           <td align="right"><label for="miasto">Miasto:</label></td>
+                           <td><input type="text" id="miasto" name="miasto" size="20">
+                               <label for="kod-pocz">Kod:</label>
+                               <input type="text" id="kod-pocz" name="kod-pocz" size="6"> 
+                           </td>
+                       </tr>
+                       <tr>
+                           <td align="right"><label for="email">Email:</label></td>
+                           <td><input type="email" id="email" name="email" size="30"></td>
+                       </tr>
+                   </table>
+               </fieldset>
             </td>
         </tr>
         <tr>
             <td>
-                <form action="/action_page.php" method="post">
-                    <fieldset>
-                    <legend><b>Oceń książkę</b></legend>
-                     <label for="ocena">Wybierz <br> jedną z</label>
-                          <select name="ocena" id="ocena">
-                              <option value="0">Oceń książkę przy pomocy tego pola</option>
-                              <option value="good">Dobra</option>
-                              <option value="meh">średnia</option>
-                              <option value="bad">słaba</option>
-                          </select> <br>
-                          pozycji
-                    </fieldset>
-                </form>
+                <fieldset>
+                <legend><b>Oceń książkę</b></legend>
+                 <label for="ocena">Wybierz <br> jedną z</label>
+                      <select name="ocena" id="ocena">
+                          <option value="0">Oceń książkę przy pomocy tego pola</option>
+                          <option value="good">Dobra</option>
+                          <option value="meh">średnia</option>
+                          <option value="bad">słaba</option>
+                      </select> <br>
+                      pozycji
+                </fieldset>
             </td>
             <td colspan="2">
-                <form action="/action_page.php" method="post">
-                    <fieldset>
-                        <legend><b>Uzasadnij ocenę</b></legend>
-                        <textarea id="long_ocena" name="long_ocena" rows="8" cols="50"></textarea>
-                    </fieldset>
-                </form>
+                 <fieldset>
+                     <legend><b>Uzasadnij ocenę</b></legend>
+                     <textarea id="long_ocena" name="long_ocena" rows="8" cols="50"></textarea>
+                 </fieldset>
             </td>
 
         </tr>
         <tr>
             <td align="center">
                 <input type="submit" value="Wyślij">
-                <button type="cancel">Anuluj</button>
+                <button type="reset">Anuluj</button>
             </td>
         </tr>
     </table>
+    </form>
+
+    <!-- Drugi formularz -->
+    
     <br><br><br>
     <h1>Wypełnij formulaż</h1>
     <hr color="red">
@@ -192,8 +170,6 @@
         <input type="text" id="miasto2" name="miasto2">  
     </fieldset>
     </font>
-    </form>
-    <form>
         <font color="green">
         <fieldset>
             <legend>Opcjonalne dane</legend>
@@ -240,10 +216,9 @@
                 <tr>
                     <td align="center">
                         <input type="submit" value="Wyślij">
-                        <button type="cancel">Wyczyść pola</button>
+                        <button type="reset">Wyczyść pola</button>
                     </td>
                  </tr>
-
             </table>
     </form>
 </body>
