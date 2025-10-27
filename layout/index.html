@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Layout</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="html">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Bartosz Szyjka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    header {
+        background-color: rgb(96, 96, 96);
+        text-align: center;
+        padding: 2px;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+    }
+    nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background: rgba(96, 96, 96, 0.884);
+        padding: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    article{
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: rgba(96, 96, 96, 0.6);
+        height: 300px;
+    }
+    footer {
+        background-color: rgb(96, 96, 96);
+        padding: 10px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+</style>
+</head>
+<body>
+<header>
+  <h2>Miasta</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="london.html" target="iframe">Londyn</a></li>
+      <li><a href="paris.html" target="iframe">Paryż</a></li>
+      <li><a href="tokyo.html" target="iframe">Tokio</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+   <iframe name="iframe" src="london.html" title="iframe"></iframe>
+  </article>
+</section>
+
+<footer>
+  <p>Footer jakis idk </p>
+</footer>
+
+</body>
+</html>
