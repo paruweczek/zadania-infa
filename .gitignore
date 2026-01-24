@@ -1,0 +1,11 @@
+# ignoruj wszystko w cpp
+/notatki/cpp/*
+
+# ignoruj folder .vscode w cpp
+/notatki/.vscode/
+
+# poza katalogami (żeby Git mógł wchodzić do podfolderów)
+/notatki/cpp/**/
+
+# śledź tylko pliki .cpp
+!/notatki/cpp/**/*.cpp
