@@ -1,6 +1,6 @@
 # ignoruj wszystko w cpp
 /notatki/cpp/*
-
+.idea
 # ignoruj folder .vscode w cpp
 /notatki/.vscode/
 
