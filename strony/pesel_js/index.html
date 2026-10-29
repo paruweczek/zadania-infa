@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        var data = document.getElementById("data").value;
+        var gender = document.getElementById("plec").value;
+        var pesel = document.getElementById("pesel").value;
+        var wynik = document.getElementById("wynik");
+        function valid() {
+
+        }   
+    </script>
+</head>
+<body>
+    <h1>super duper validator</h1>
+    <form name="form" id="form" onsubmit="valid(); return false;">
+        <label for="data">Wpisz datę urodzenia</label>
+        <input type="date" name="data" id="data"><br>
+        Podaj płeć:
+        <input type="radio" name="plec" id="plec" value="m">
+        <label for="m">Mężczyzna</label>
+        <input type="radio" name="plec" id="plec" value="k">
+        <label for="k">Kobieta</label>
+        <label for="pesel">Podaj PESEL</label>
+        <input type="number" name="pesel" id="pesel" maxlength="11"><br>
+        <input type="submit" value="Sprawdź PESEL">
+    </form>
+     <p id="wynik"></p>
+</body>
+</html>
