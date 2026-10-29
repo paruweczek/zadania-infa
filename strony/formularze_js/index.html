@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .centre {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function oblicz (){
+            var liczba1 = document.getElementById("liczba1").value;
+            var liczba2 = document.getElementById("liczba2").value;
+            var dodaj = document.getElementById("dodawanie").checked;
+            var odejmij = document.getElementById("odejmowanie").checked;
+            var pomnoz = document.getElementById("mnozenie").checked;
+            var podziel = document.getElementById("dzielenie").checked;
+            if (liczba1 == "" || liczba2 == "" || isNaN(liczba1) || isNaN(liczba2)) {
+                alert("Nie podano poprawnych liczb ciulu");
+                return false;
+            }else if (!(dodaj || odejmij || pomnoz || podziel)) {
+                alert("Nie podano operacji");
+                return false;
+            }
+            var wynik = 0;
+            if (dodaj) {
+                wynik = parseFloat(liczba1) + parseFloat(liczba2);
+            } else if (odejmij) {
+                wynik = parseFloat(liczba1) - parseFloat(liczba2);
+            } else if (pomnoz) {
+                wynik = parseFloat(liczba1) * parseFloat(liczba2);
+            } else if (podziel) {
+                wynik = parseFloat(liczba1) / parseFloat(liczba2);
+            }
+            document.getElementById("wynik").innerHTML = "Wynik operacji: " + wynik;
+        
+        }
+
+    </script>
+</head>
+<body> 
+    <h1>Super duper dodawato-odejmowato-mnozowato-dzielno-inator</h1>
+    <form name="form" id="form" onsubmit="oblicz(); return false;">
+        <table>
+            <tr>
+                <td>
+                    <label for="liczba1">Liczba nr 1: </label>
+                    <input type="number" name="liczba1" id="liczba1">
+                </td>
+                <td>
+                    <label for="liczba2">Liczba nr 2: </label>
+                    <input type="number" name="liczba2" id="liczba2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="centre">
+                Operacja: 
+                <input type="radio" id="dodawanie" name="operacja" value="Dodawanie">
+                <label for="dodawanie">Dodaj</label>
+                <input type="radio" id="odejmowanie" name="operacja" value="Dodawanie">
+                <label for="odejmowanie">Odejmij</label>
+                <input type="radio" id="mnozenie" name="operacja" value="Dodawanie">
+                <label for="mnozenie">Pomnóż</label>
+                <input type="radio" id="dzielenie" name="operacja" value="Dodawanie">
+                <label for="dzielenie">Podziel</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="td1" class="centre">
+                    <input type="submit" value="Oblicz" id="submit" class="centre">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="td1">
+                    <p id="wynik"></p>
+                </td>
+        </table>
+</body>
+</html>
